@@ -98,7 +98,7 @@ Like the fossil fuels that keep your car running, the data that keep your produc
 
 				<!-- Six -->
 					<section class="wrapper style1 align-center">
-						<div class="items style1 medium onscroll-fade-in">
+						<div class="inner">
 							<span class="icon style2 major fa-github"></span>
 							<h2>Grab our code on GitHub</h2>
 							<p>Our project is entirely open source and we're always looking for more contributors.</p>
@@ -109,11 +109,14 @@ Like the fossil fuels that keep your car running, the data that keep your produc
 									<h2>Who are we?</h2>
 									<p>We're a small group of developers and privacy + security enthusiasts supported by the <a href="https://berkmankleinassembly.org/">Berkman Klein Center</a> at Harvard University.</p>
 								</section>
-							</div>
-				<!-- Seven -->
-				
-							<section class="wrapper style1 align-center">
-						<div class="inner">
+						</div>
+
+				<!-- Demo -->
+
+					<section class="wrapper style1 align-center">
+						<div class="inner inline-block">
+
+
 <script src="/js/dogs/tracking-min.js"></script>
 <script src="/js/dogs/tracking-min.js"></script>
 <script src="/js/dogs/face-min.js"></script>
@@ -128,7 +131,6 @@ Like the fossil fuels that keep your car running, the data that keep your produc
     clearOutput();
     setTimeout(inspectCurrentImage, 100);  // make demo look like it's actually doing work
   }
-
   function clearOutput() {
     $('.rect').remove();
     $('.tracking-log').text('');
@@ -137,12 +139,9 @@ Like the fossil fuels that keep your car running, the data that keep your produc
   function inspectCurrentImage () {
     $('#log-line-2').text('> New image detected. Analyzing image without sending any data to server.');
     var img = document.getElementById('demo-img');
-
     var tracker = new tracking.ObjectTracker(['face']);
     tracker.setStepSize(1.7);  
-
     tracking.track('#demo-img', tracker);
-
     tracker.on('track', function(event) {
       var numHumans = event.data.length;
       if (numHumans > 0) {
@@ -155,7 +154,6 @@ Like the fossil fuels that keep your car running, the data that keep your produc
         window.plot(rect.x, rect.y, rect.width, rect.height);
       });
     });
-
     window.plot = function(x, y, w, h) {
       var rect = document.createElement('div');
       document.querySelector('.demo-container').appendChild(rect);
@@ -166,7 +164,6 @@ Like the fossil fuels that keep your car running, the data that keep your produc
       rect.style.top = (img.offsetTop + y) + 'px';
     };
   };
-
   /*  Track what kind of image the users are sending around
    */
   function trackUserImageType (imageType) {
@@ -179,9 +176,7 @@ Like the fossil fuels that keep your car running, the data that keep your produc
       var reportIframe = $('#widgetIframe')[0];
       reportIframe.src = reportIframe.src;  // trigger reload
     }, 2000);
-
   }
-
   // simplified DP filter
   function differential (imageType) {
     var rv = Math.random();
@@ -204,10 +199,13 @@ Like the fossil fuels that keep your car running, the data that keep your produc
 }
 </style>
 
+
 <section id="features" class="section section-hilite">
   <div class="container">
 	  <span class="icon style2 major fa-code-fork"></span>
     <h2 class="section-title align-center"><span><a href='//demo.cleaninsights.io'>Clean Insights Demo</a></span></h2>
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2 orient-center content-align-left">
         <p>Imagine you run an image-sharing service with end-to-end encryption and a major focus on privacy. To keep up with the other trendy photo apps, you want to build some cool filters, but only for the images your users share most often.</p>
         <p>You're in a pinch.  You can easily determine your needs by running a standard analytics program on individual devices, but that's a lot more data than you want to log.</p>
         <p>Aha! You can use Clean Insights to take a <a href="https://en.wikipedia.org/wiki/Differential_privacy">differentially private</a> measure of user activity.  You won't have to store individual data points and you'll still learn how your users are behaving in aggregate.</p>
@@ -236,7 +234,7 @@ Like the fossil fuels that keep your car running, the data that keep your produc
         </div>
       </div>
     </div>
-							</section>
+
 <section class="section">
   <div class="container">
     <h4 class="section-title"><span>What the site owner actually sees:</span></h4>
@@ -244,6 +242,7 @@ Like the fossil fuels that keep your car running, the data that keep your produc
       <iframe id="widgetIframe" width="100%" height="600" src="https://demo.cleaninsights.io/index.php?module=Widgetize&action=iframe&secondaryDimension=eventAction&widget=1&moduleToWidgetize=Events&actionToWidgetize=getName&idSite=1&period=year&date=2017-12-21&disableLink=1&widget=1" scrolling="no" frameborder="0" marginheight="0" marginwidth="0"></iframe>
 
     </div>
+</section>
 							
 				<!-- Seven -->
 					<section class="wrapper style1 align-center">
