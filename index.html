@@ -107,13 +107,13 @@ Like the fossil fuels that keep your car running, the data that keep your produc
 								<section>
 									<span class="icon style2 major fa-users"></span>
 									<h2>Who are we?</h2>
-									<p>We're a small group of developers and privacy + security geeks supported by the <a href="https://berkmankleinassembly.org/">Berkman Klein Center</a> at Harvard University.</p>
+									<p>We're a small group of developers and privacy + security enthusiasts supported by the <a href="https://berkmankleinassembly.org/">Berkman Klein Center</a> at Harvard University.</p>
 								</section>
 						</div>
 
 				<!-- Demo -->
 
-					<section class="wrapper style1 align-left">
+					<section class="wrapper style1 align-center">
 
 
 <script src="/js/dogs/tracking-min.js"></script>
@@ -200,9 +200,9 @@ Like the fossil fuels that keep your car running, the data that keep your produc
 <style>
 .rect {
   border: 2px solid #a64ceb;
-  left: -600px;
+  left: -1000px;
   position: absolute;
-  top: -600px;
+  top: -1000px;
 }
 </style>
 
@@ -213,15 +213,15 @@ Like the fossil fuels that keep your car running, the data that keep your produc
     <h2 class="section-title align-center"><span><a href='//demo.cleaninsights.io'>Clean Insights: Try It Out!</a></span></h2>
     <div class="row">
       <div class="col-md-8 col-md-offset-2">
-        <p>Suppose you run a service letting users send images to one another with end-to-end encryption.  You love your customers, and you respect their privacy.</p>
-        <p>To keep up with the other trendy photo apps, you want to provide users with great filters.  With limited time in the day, you choose to prioritize filters for the kinds of images your users share most often.</p>
-        <p>You're in a pinch.  You can easily determine the subject of each photo by running analytics on each user's device, but that's a lot of stored data with the risk of being hacked, subpoenaed, or misused internally.</p>
-        <p>Aha!  You can use Clean Insights to take a <a href="https://en.wikipedia.org/wiki/Differential_privacy">differentially private</a> measure of user activity.  You'll never know exactly what each user did, but you'll be able to tell what your users were doing as a group.</p>
-        <p>Try it! Choose which picture you'd like to send (you can send as many as you like).  Sometimes, Clean Insights will tell the truth.  Other times, it'll mask your activity with false results.</p>
+        <p>Imagine you run an image-sharing service with end-to-end encryption and a major focus on privacy. To keep up with the other trendy photo apps, you want to build some cool filters, but only for the images your users share most often.</p>
+        <p>You're in a pinch.  You can easily determine your needs by running a standard analytics program on individual devices, but that's a lot more data than you want to log.</p>
+        <p>Aha! You can use Clean Insights to take a <a href="https://en.wikipedia.org/wiki/Differential_privacy">differentially private</a> measure of user activity.  You won't have to store individual data points and you'll still learn how your users are behaving in aggregate.</p>
+	      <h3> Try it out!</h3>
+	<p> Choose a picture to send (send as many as you'd like), and watch Clean Insights work its magic.  Sometimes it'll tell the truth, and other times it'll mask your activity. Either way you'll end up with the results you need.</p>
       </div>
       <div class="col-md-8 col-md-offset-2 main-action text-center">
-        <a href="javascript:insertImage('dog.jpg')" class="btn btn-lg btn-danger">Send a picture of a dog</a>&nbsp;&nbsp;&nbsp;
-        <a href="javascript:insertImage('human.jpg')" class="btn btn-lg btn-danger">Send a picture of humans</a>&nbsp;&nbsp;&nbsp;
+        <a href="javascript:insertImage('dog.jpg')" class="btn btn-lg btn-danger align-center">Send a picture of a dog</a>&nbsp;&nbsp;&nbsp;
+        <a href="javascript:insertImage('human.jpg')" class="btn btn-lg btn-danger align-center">Send a picture of humans</a>&nbsp;&nbsp;&nbsp;
       </div>
     </div>
 
@@ -248,7 +248,7 @@ Like the fossil fuels that keep your car running, the data that keep your produc
   <div class="container">
     <h4 class="section-title"><span>What the site owner actually sees:</span></h4>
     <div class="row">
-      <iframe id="widgetIframe" width="75%" height="250" src="https://demo.cleaninsights.io/index.php?module=Widgetize&action=iframe&secondaryDimension=eventAction&widget=1&moduleToWidgetize=Events&actionToWidgetize=getName&idSite=1&period=year&date=2017-12-21&disableLink=1&widget=1" scrolling="no" frameborder="0" marginheight="0" marginwidth="0"></iframe>
+      <iframe id="widgetIframe" width="100%" height="600" src="https://demo.cleaninsights.io/index.php?module=Widgetize&action=iframe&secondaryDimension=eventAction&widget=1&moduleToWidgetize=Events&actionToWidgetize=getName&idSite=1&period=year&date=2017-12-21&disableLink=1&widget=1" scrolling="no" frameborder="0" marginheight="0" marginwidth="0"></iframe>
 
     </div>
   </div>
