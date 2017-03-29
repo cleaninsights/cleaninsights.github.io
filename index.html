@@ -213,13 +213,12 @@ Like the fossil fuels that keep your car running, the data that keep your produc
 	  <span class="icon style2 major fa-code-fork"></span>
     <h2 class="section-title align-center"><span><a href='//demo.cleaninsights.io'>Clean Insights Demo</a></span></h2>
     <div class="row">
-      <div class="col-md-8 col-md-offset-2">
+      <div class="col-md-8 col-md-offset-2 orient-center content-align-left">
         <p>Imagine you run an image-sharing service with end-to-end encryption and a major focus on privacy. To keep up with the other trendy photo apps, you want to build some cool filters, but only for the images your users share most often.</p>
         <p>You're in a pinch.  You can easily determine your needs by running a standard analytics program on individual devices, but that's a lot more data than you want to log.</p>
         <p>Aha! You can use Clean Insights to take a <a href="https://en.wikipedia.org/wiki/Differential_privacy">differentially private</a> measure of user activity.  You won't have to store individual data points and you'll still learn how your users are behaving in aggregate.</p>
 	      <h3> Try it out!</h3>
-	<p> Choose a picture to send (send as many as you'd like), and watch Clean Insights work its magic.</p>
-	<p> Sometimes it'll tell the truth, and other times it'll mask your activity. Either way you'll end up with the results you need.</p>
+	<p> Choose a picture to send (send as many as you'd like), and watch Clean Insights work its magic. <br> Sometimes it'll tell the truth, and other times it'll mask your activity. Either way you'll end up with the results you need.</p>
       </div>
       <div class="col-md-8 col-md-offset-2 main-action text-center">
         <a href="javascript:insertImage('dog.jpg')" class="button">Send a picture of a dog</a>&nbsp;&nbsp;&nbsp;
@@ -230,11 +229,13 @@ Like the fossil fuels that keep your car running, the data that keep your produc
       <div class="demo-frame col-md-8 col-md-offset-2">
         <div id="fake-shell">
           <pre>
+	  <div>
 > Waiting for user to send image...
 <span id="log-line-2" class="tracking-log"></span>
 <span id="log-line-3" class="tracking-log"></span>
 <span id="log-line-4" class="tracking-log"></span>
 <span id="log-line-5" class="tracking-log"></span>
+</div>
           </pre>
         </div>
         <div id="demo-container" class="demo-container">
