@@ -22,7 +22,7 @@
 							<h1>Clean Insights </h1>
 							<p class="major"><!--[-->
 
-A safe, sustainable, and secure way for developers to gather insights without compromising user privacy.
+A safe, sustainable, and secure way to gather digital insights without compromising user privacy.
 
 </p>
 							<ul class="actions vertical">
@@ -45,7 +45,7 @@ Like the fossil fuels that keep your car running, the data that keep your produc
 
 </p>
 							<ul class="actions vertical">
-								<li><a href="#contact" class="button">Sign me up</a></li>
+								<li><a href="#contact" class="button">Try it out</a></li>
 							</ul>
 						</div>
 						<div class="image">
@@ -56,10 +56,10 @@ Like the fossil fuels that keep your car running, the data that keep your produc
 				<!-- Three -->
 					<section class="spotlight style1 orient-left content-align-left image-position-center onscroll-image-fade-in">
 						<div class="content">
-							<h2>The Bike Courier</h2>
-							<p>Is privacy and security at the core of your product? Have you never collected insights before because there were no reasonable, privacy-preserving options out there? Clean Insights will allow you to gather insights on your users for the first time.</p>
+							<h2>Data is gold?</h2>
+							<p>Today's tech companies treat data like gold. They gather it, hoard it, and count it, seeing it as a valuable asset with few downsides. Why not track everything and figure it out later?!</p>
 							<ul class="actions vertical">
-								<li><a href="#demo" class="button">Try it out</a></li>
+								<li><a href="#contact" class="button">Tell me more</a></li>
 							</ul>
 						</div>
 						<div class="image">
@@ -70,10 +70,10 @@ Like the fossil fuels that keep your car running, the data that keep your produc
 				<!-- Four -->
 					<section class="spotlight style1 orient-right content-align-left image-position-center onscroll-image-fade-in">
 						<div class="content">
-							<h2>The Hybrid</h2>
-							<p>Do you care about privacy just as much as you care about gathering accurate user insights? Clean Insights will give your users the privacy they deserve while still giving you the product and user visibility you need.  </p>
+							<h2>More like plutonium!</h2>
+							<p>We think data is more like plutonium. It's certainly powerful, but it's also dangerous and toxic when not handled with care. Mishandled data has the potential to harm people for generations into the future.</p>
 							<ul class="actions vertical">
-								<li><a href="#demo" class="button">Try it out</a></li>
+								<li><a href="#contact" class="button">Tell me more</a></li>
 							</ul>
 						</div>
 						<div class="image">
@@ -84,10 +84,10 @@ Like the fossil fuels that keep your car running, the data that keep your produc
 				<!-- Five -->
 					<section class="spotlight style1 orient-left content-align-left image-position-center onscroll-image-fade-in">
 						<div class="content">
-							<h2>The Freight Truck</h2>
-							<p>Is data collection at the core of your business? We totally understand. We still think you'll find value in the Clean Insights model and hope you'll take a look at our GitHub repo.</p>
+							<h2>The Clean Insights Tenets</h2>
+							<p>That's why we're building Clean Insights, a tool to power and empower privacy-preserving analytics. Using advanced netowrk security, privacy-by-default tools and logic, and cutting edge privacy research methods, Clean Insights creates the new standard for responsible analytics. </p>
 							<ul class="actions vertical">
-								<li><a href="#demo" class="button">Try it out</a></li>
+								<li><a href="#contact" class="button">Tell me more</a></li>
 							</ul>
 						</div>
 						<div class="image">
@@ -101,7 +101,7 @@ Like the fossil fuels that keep your car running, the data that keep your produc
 						<div class="inner">
 							<span class="icon style2 major fa-github"></span>
 							<h2>Grab our code on GitHub</h2>
-							<p>Our project is entirely open source and we're always looking for more contributors.</p>
+							<p>Our project is free and open source and we're always looking for more contributors.</p>
 							<a href="https://github.com/cleaninsights/" class="button">Take me to the code</a>
 							<div class="inner">
 								<section>
@@ -122,129 +122,6 @@ Like the fossil fuels that keep your car running, the data that keep your produc
 								</section>
 							<hr> 
 	
-<script src="/js/dogs/tracking-min.js"></script>
-<script src="/js/dogs/tracking-min.js"></script>
-<script src="/js/dogs/face-min.js"></script>
-<script>
-  var lyingRate = .5;
-  function insertImage(filename) {
-    $('#demo-img').remove();
-    $('#demo-container').append($('<img>', {
-      src: '/images/' + filename,
-      id: 'demo-img'
-    })); 
-    clearOutput();
-    setTimeout(inspectCurrentImage, 100);  // make demo look like it's actually doing work
-  }
-  function clearOutput() {
-    $('.rect').remove();
-    $('.tracking-log').text('');
-  }
-  
-  function inspectCurrentImage () {
-    $('#log-line-2').text('> New image detected. Analyzing image without sending any data to server.');
-    var img = document.getElementById('demo-img');
-    var tracker = new tracking.ObjectTracker(['face']);
-    tracker.setStepSize(1.7);  
-    tracking.track('#demo-img', tracker);
-    tracker.on('track', function(event) {
-      var numHumans = event.data.length;
-      if (numHumans > 0) {
-        setTimeout(trackUserImageType('humans'), 500);  // make demo look like it's actually doing work
-      } else {
-        // simplifying assumption.  it could be a cat, too.
-        setTimeout(trackUserImageType('a dog'), 500);  // make demo look like it's actually doing work
-      }
-      event.data.forEach(function(rect) {
-        window.plot(rect.x, rect.y, rect.width, rect.height);
-      });
-    });
-    window.plot = function(x, y, w, h) {
-      var rect = document.createElement('div');
-      document.querySelector('.demo-container').appendChild(rect);
-      rect.classList.add('rect');
-      rect.style.width = w + 'px';
-      rect.style.height = h + 'px';
-      rect.style.left = (img.offsetLeft + x) + 'px';
-      rect.style.top = (img.offsetTop + y) + 'px';
-    };
-  };
-  /*  Track what kind of image the users are sending around
-   */
-  function trackUserImageType (imageType) {
-    $('#log-line-3').text('> Analysis determined the image is of ' + imageType + '.');
-    $('#log-line-4').text('> Applying differential privacy before reporting image type to server.');
-    var reportedImageType = differential(imageType);
-    _paq.push(['trackEvent', 'image', 'send', reportedImageType]);
-    setTimeout(function () {    // make demo look like it's actually doing work
-      $('#log-line-5').text('> Reporting that the images is of ' + reportedImageType + '.')
-      var reportIframe = $('#widgetIframe')[0];
-      reportIframe.src = reportIframe.src;  // trigger reload
-    }, 2000);
-  }
-  // simplified DP filter
-  function differential (imageType) {
-    var rv = Math.random();
-    if (rv < lyingRate / 2) {
-      return 'humans';
-    } else if (rv < lyingRate) {
-      return 'a dog';
-    } else {
-      return imageType;
-    }
-  }
-</script>
-
-<style>
-.rect {
-  border: 2px solid #a64ceb;
-  left: -1000px;
-  position: absolute;
-  top: -1000px;
-}
-</style>
-
-
-<section class="wrapper style1 align-left" id="demo">
-	  <span class="icon style2 major fa-cog"></span>
-    <h2 class="section-title align-center"><span><a href='//demo.cleaninsights.io'>Clean Insights Demo: Try it out!</a></span></h2>
-    <div class="row">
-      <div class="col-md-6 col-md-offset-2 orient-center content-align-center">
-	      <h3> The scenario</h3>
-        <p>Imagine you run an image-sharing service with end-to-end encryption and a major focus on privacy. To keep up with the other trendy photo apps, you want to build some cool filters, but only for the images your users share most often. You're in a pinch. You can easily determine your needs by running a standard analytics program on individual devices, but that's a lot more data than you want to log.</p>
-        <p>Aha! You can use Clean Insights to take a <a href="https://en.wikipedia.org/wiki/Differential_privacy">differentially private</a> measure of user activity. You won't have to store individual data points and you'll still learn how your users are behaving in aggregate.</p>
-	      <h3> Give it a whirl</h3>
-	<p> Send a picture (as many times as you'd like), and watch Clean Insights work its magic. <br> Sometimes it'll tell the truth, and other times it'll mask your activity. You'll still end up with the overarching insights you need.</p>
-      </div>
-      <div class="col-md-6 col-md-offset-2 main-action content-align-center">
-        <a href="javascript:insertImage('dog.jpg')" class="button align-center">Send a picture of a dog</a>&nbsp;&nbsp;&nbsp;
-       <a href="javascript:insertImage('human.jpg')" class="button align-center">Send a picture of a human</a>&nbsp;&nbsp;&nbsp;
-	    </div>
-    <div class="row">
-      <br/>
-      <div class="demo-frame col-md-6 col-md-offset-2">
-        <div id="fake-shell">
-          <pre>
-
-> Waiting for user to send image...
-
-        <div id="demo-container" class="demo-container">
-        </div>
-
-<span id="log-line-2" class="tracking-log"></span>
-<span id="log-line-3" class="tracking-log"></span>
-<span id="log-line-4" class="tracking-log"></span>
-<span id="log-line-5" class="tracking-log"></span>
-         
-     </pre>
-	    
-  <div class="row">
-    <h3> The user insights you'll actually see:</h3>
-      <iframe id="widgetIframe" width="100%" height="600" src="https://demo.cleaninsights.io/index.php?module=Widgetize&action=iframe&secondaryDimension=eventAction&widget=1&moduleToWidgetize=Events&actionToWidgetize=getName&idSite=1&period=year&date=2017-12-21&disableLink=1&widget=1" scrolling="no" frameborder="0" marginheight="0" marginwidth="0"></iframe>
-
-    </div>
-							
-			
 
 <!-- Footer -->
 <footer class="wrapper style1 align-center">
@@ -253,12 +130,5 @@ Like the fossil fuels that keep your car running, the data that keep your produc
 	</div>
 </footer>
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/skel.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
 		</body>
 	      </html>
